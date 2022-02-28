@@ -1,0 +1,10 @@
+<webcam [height]="500" [width]="500"
+        [trigger]="triggerObservable"
+        (imageCapture)="handleImage($event)"
+        *ngIf="showWebcam"
+        [mirrorImage]="mirrorProperties"
+        [captureImageData]="imageCapture"></webcam>
+<div>
+  <button (click)="triggerSnapshot(); toPost();">SNAP</button>
+  <button (click)="toggleWebcam();">Toggle Webcam</button>
+</div>

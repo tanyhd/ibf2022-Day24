@@ -1,0 +1,17 @@
+<h1>Post</h1>
+<form [formGroup]="form" (ngSubmit)="post()">
+  <table>
+    <tr>
+      <div *ngIf="img">
+        <img [src]="img" height="250"/>
+      </div>
+    </tr>
+    <tr>Comments</tr>
+    <tr><textarea name="" id="" cols="30" rows="10" formControlName="comment"></textarea></tr>
+    <tr>Poster:</tr>
+    <tr><input type="text" formControlName="poster"></tr>
+    <tr><button type="submit">Post</button></tr>
+  </table>
+</form>
+<tr><Button type="button" (click)="homePage()">Back</Button></tr>
+
